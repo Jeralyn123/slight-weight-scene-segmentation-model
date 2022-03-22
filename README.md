@@ -20,9 +20,8 @@ python train.py --model swnet --backbone resnet50 --dataset cityscape --lr 0.000
 ```
 
 ### Evaluation
------------------
 ```
-# for example, evaluate propsoed-net_cityscape
+# for example, evaluate swnet_cityscape
 python eval.py --model swnet --backbone resnet50 --dataset cityscape
 ```
 ```
