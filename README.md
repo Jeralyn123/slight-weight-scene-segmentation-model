@@ -17,7 +17,7 @@ git clone https://github.com/Jeralyn123/slight-weight-scene-segmentation.git
 - **training**
 ```
 python train.py --model swnet --backbone resnet50 --dataset cityscape --lr 0.0001 --epochs 50
-
+```
 
 ### Evaluation
 -----------------
