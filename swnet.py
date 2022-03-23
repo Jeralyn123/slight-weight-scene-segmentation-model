@@ -288,7 +288,7 @@ def get_swnet(dataset='citys', backbone='', pretrained=False, root='~/.torch/mod
     if pretrained:
         from .model_store import get_model_file
         device = torch.device(kwargs['local_rank'])
-        model.load_state_dict(torch.load(get_model_file('enet_%s' % (acronyms[dataset]), root=root),
+        model.load_state_dict(torch.load(get_model_file('swnet_%s' % (acronyms[dataset]), root=root),
                               map_location=device))
     return model
 
