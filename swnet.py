@@ -1,8 +1,8 @@
-"""Efficient Neural Network"""
+"""a slight weight segmentation model"""
 import torch
 import torch.nn as nn
 
-__all__ = ['ENet', 'get_enet', 'get_enet_citys']
+__all__ = ['swet', 'get_swnet', 'get_swnet_citys']
 
 
 class ENet(nn.Module):
