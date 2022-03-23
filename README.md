@@ -42,9 +42,7 @@ a simulative experiment on real scene based on jetson series.
 ![image](https://user-images.githubusercontent.com/43395674/159433770-ea19dea9-d0ab-45f0-b006-a5c6a028447a.png)
 
 ## References
-- [PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
 - [cityscape](https://github.com/mcordts/cityscapesScripts.git)
-- [gloun-cv](https://github.com/dmlc/gluon-cv)
 - [imagenet](https://github.com/pytorch/examples/tree/master/imagenet)
 - [code support](https://github.com/Tramac/awesome-semantic-segmentation-pytorch.git)
 
