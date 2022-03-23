@@ -41,3 +41,5 @@ note: you also can train a reconstructed model by yourself. Then, you should add
 a simulative experiment on real scene based on jetson series.
 ![image](https://user-images.githubusercontent.com/43395674/159433770-ea19dea9-d0ab-45f0-b006-a5c6a028447a.png)
 
+### Notes: 
+We thanks the code support by https://github.com/Tramac/awesome-semantic-segmentation-pytorch.git
