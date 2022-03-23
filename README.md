@@ -1,5 +1,5 @@
 # slight-weight-scene-segmentation-model
-
+If you want to run the program, you should firstly install dependencies, and also download scene datasets such as cityscape.
 ## Installation
 ```
 # dependencies
