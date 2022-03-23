@@ -5,11 +5,11 @@ import torch.nn as nn
 __all__ = ['swet', 'get_swnet', 'get_swnet_citys']
 
 
-class ENet(nn.Module):
-    """Efficient Neural Network"""
+class swet(nn.Module):
+    """a slight weight segmentation model"""
 
     def __init__(self, nclass, backbone='', aux=False, jpu=False, pretrained_base=None, **kwargs):
-        super(ENet, self).__init__()
+        super(swet, self).__init__()
         self.initial = InitialBlock(13, **kwargs)
 #block 1:
         self.bottleneck1_0 = Bottleneck(16, 16, 64, downsampling=True, **kwargs)
@@ -160,7 +160,7 @@ class ENet(nn.Module):
 
 
 class InitialBlock(nn.Module):
-    """ENet initial block"""
+    """swet initial block"""
 
     def __init__(self, out_channels, norm_layer=nn.BatchNorm2d, **kwargs):
         super(InitialBlock, self).__init__()
@@ -275,7 +275,7 @@ class UpsamplingBottleneck(nn.Module):
         return out
 
 
-def get_enet(dataset='citys', backbone='', pretrained=False, root='~/.torch/models', pretrained_base=True, **kwargs):
+def get_swnet(dataset='citys', backbone='', pretrained=False, root='~/.torch/models', pretrained_base=True, **kwargs):
     acronyms = {
         'pascal_voc': 'pascal_voc',
         'pascal_aug': 'pascal_aug',
@@ -284,7 +284,7 @@ def get_enet(dataset='citys', backbone='', pretrained=False, root='~/.torch/mode
         'citys': 'citys',
     }
     from core.data.dataloader import datasets
-    model = ENet(datasets[dataset].NUM_CLASS, backbone=backbone, pretrained_base=pretrained_base, **kwargs)
+    model = swet(datasets[dataset].NUM_CLASS, backbone=backbone, pretrained_base=pretrained_base, **kwargs)
     if pretrained:
         from .model_store import get_model_file
         device = torch.device(kwargs['local_rank'])
@@ -293,11 +293,11 @@ def get_enet(dataset='citys', backbone='', pretrained=False, root='~/.torch/mode
     return model
 
 
-def get_enet_citys(**kwargs):
+def get_swnet_citys(**kwargs):
     return get_enet('citys', '', **kwargs)
 
 
 if __name__ == '__main__':
     img = torch.randn(1, 3, 512, 512)
-    model = get_enet_citys()
+    model = get_swnet_citys()
     output = model(img)
