@@ -11,8 +11,6 @@ conda install pytorch torchvision -c pytorch
 # install PyTorch Segmentation
 git clone https://github.com/Jeralyn123/slight-weight-scene-segmentation.git
 
-# the following will install the lib with symbolic links, so that you can modify
-### Train
 -----------------
 - **training**
 ```
