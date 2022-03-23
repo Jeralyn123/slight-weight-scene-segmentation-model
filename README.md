@@ -43,7 +43,7 @@ a simulative experiment on real scene based on jetson series.
 
 ## References
 - [PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
-- [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)
+- [cityscape](https://github.com/mcordts/cityscapesScripts.git)
 - [gloun-cv](https://github.com/dmlc/gluon-cv)
 - [imagenet](https://github.com/pytorch/examples/tree/master/imagenet)
 - [code support](https://github.com/Tramac/awesome-semantic-segmentation-pytorch.git)
